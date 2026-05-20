@@ -21,7 +21,7 @@ function AnimatedNumber({ value, suffix, color }) {
   }, [inView, value, count])
 
   return (
-    <div ref={ref} className={`text-4xl md:text-6xl font-bold tracking-tighter ${color}`}>
+    <div ref={ref} className={`text-5xl md:text-6xl font-bold tracking-tighter mb-2 ${color}`}>
       <motion.span>
         {useTransform(count, (v) => Math.round(v))}
       </motion.span>
@@ -40,7 +40,7 @@ export default function Stats() {
           viewport={{ once: true }}
           className="liquid-card p-12 md:p-16"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 text-center">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -52,8 +52,8 @@ export default function Stats() {
               >
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} color={stat.color} />
                 <div>
-                  <p className="text-white font-bold text-sm md:text-base tracking-tight">{stat.label}</p>
-                  <p className="text-[#86868b] text-xs md:text-sm font-light mt-1">{stat.sublabel}</p>
+                  <p className="text-white font-bold text-lg md:text-base tracking-tight">{stat.label}</p>
+                  <p className="text-[#86868b] text-sm md:text-sm font-light mt-1">{stat.sublabel}</p>
                 </div>
               </motion.div>
             ))}

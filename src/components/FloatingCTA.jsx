@@ -42,15 +42,10 @@ export default function FloatingCTA() {
             animate={{ scale: 1, rotate: 0 }}
             whileHover={{ scale: 1.1, rotate: 12 }}
             whileTap={{ scale: 0.9 }}
-            className="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_20px_40px_rgba(37,211,102,0.3)] group"
+            className="w-12 h-12 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_10px_20px_rgba(37,211,102,0.2)] group"
           >
             <MessageCircle size={28} className="text-white md:hidden" />
             <MessageCircle size={32} className="text-white hidden md:block group-hover:scale-110 transition-transform" />
-            <motion.div 
-              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute inset-0 rounded-full bg-[#25D366] -z-10"
-            />
           </motion.a>
         )}
       </AnimatePresence>
