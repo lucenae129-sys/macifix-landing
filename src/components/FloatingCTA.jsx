@@ -1,0 +1,59 @@
+import { motion, AnimatePresence } from 'framer-motion'
+import { MessageCircle, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+
+export default function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [showTooltip, setShowTooltip] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 3000)
+    const tooltipTimer = setTimeout(() => setShowTooltip(true), 6000)
+    return () => { clearTimeout(timer); clearTimeout(tooltipTimer); }
+  }, [])
+
+  return (
+    <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[150] flex flex-col items-end gap-4">
+      <AnimatePresence>
+        {showTooltip && (
+          <motion.div
+            initial={{ opacity: 0, x: 20, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="liquid-card px-4 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-bold text-white whitespace-nowrap relative"
+          >
+            🔧 ¡Diagnóstico GRATIS hoy!
+            <button 
+              onClick={() => setShowTooltip(false)}
+              className="absolute -top-2 -right-2 bg-black/50 rounded-full p-1 border border-white/10"
+            >
+              <X size={10} />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isVisible && (
+          <motion.a
+            href="https://wa.me/527331066757"
+            target="_blank"
+            initial={{ scale: 0, rotate: -45 }}
+            animate={{ scale: 1, rotate: 0 }}
+            whileHover={{ scale: 1.1, rotate: 12 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_20px_40px_rgba(37,211,102,0.3)] group"
+          >
+            <MessageCircle size={28} className="text-white md:hidden" />
+            <MessageCircle size={32} className="text-white hidden md:block group-hover:scale-110 transition-transform" />
+            <motion.div 
+              animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute inset-0 rounded-full bg-[#25D366] -z-10"
+            />
+          </motion.a>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
