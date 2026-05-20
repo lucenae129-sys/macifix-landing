@@ -44,7 +44,7 @@ export default function Hero() {
           
           <h1 className="text-hero mb-8">
             El equipo que otros<br className="hidden md:block" />
-            <span className="text-[#86868b]">ya daban por muerto.</span>
+            <span className="text-[#86868b]"> ya daban por muerto.</span>
           </h1>
           
           <p className="text-sub max-w-2xl mx-auto mb-12">
