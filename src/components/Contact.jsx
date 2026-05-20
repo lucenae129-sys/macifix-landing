@@ -46,7 +46,7 @@ export default function Contact() {
               >
                 <div className="text-[#0071e3] mb-6"><MapPin size={28} /></div>
                 <h4 className="text-lg font-bold text-white mb-3">Sucursal 1</h4>
-                <p className="text-[#86868b] text-sm font-light mb-6">Iguala de la Independencia, Gro.</p>
+                <p className="text-[#86868b] text-sm font-light mb-6">Ignacio zaragoza #29, Iguala, Gro.</p>
                 <a 
                   href="https://maps.app.goo.gl/MwHJQwnCYurQWDJ69" 
                   target="_blank" 
@@ -62,7 +62,7 @@ export default function Contact() {
               >
                 <div className="text-[#0071e3] mb-6"><MapPin size={28} /></div>
                 <h4 className="text-lg font-bold text-white mb-3">Sucursal 2</h4>
-                <p className="text-[#86868b] text-sm font-light mb-6">Iguala de la Independencia, Gro.</p>
+                <p className="text-[#86868b] text-sm font-light mb-6">Vicente Guerrero #28A, Iguala, Gro.</p>
                 <a 
                   href="https://maps.app.goo.gl/1pRHvZ4URT9328gv7" 
                   target="_blank" 

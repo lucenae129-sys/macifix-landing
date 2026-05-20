@@ -37,8 +37,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs">Ubicaciones</h4>
             <div className="space-y-4 text-[#86868b] text-sm">
-              <p>Sucursal 1: Iguala Centro, Gro.</p>
-              <p>Sucursal 2: Periférico Norte, Iguala.</p>
+              <p>Sucursal 1: Ignacio zaragoza #29, Iguala, Gro.</p>
+              <p>Sucursal 2: Vicente Guerrero #28A, Iguala, Gro.</p>
             </div>
           </div>
 
