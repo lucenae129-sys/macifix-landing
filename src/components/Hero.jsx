@@ -72,7 +72,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-16 left-1/2 -translate-x-1/2 flex items-center gap-3 text-[#86868b] text-sm font-medium tracking-wide"
+        className="mt-16 md:absolute md:bottom-16 md:left-1/2 md:-translate-x-1/2 flex items-center gap-3 text-[#86868b] text-sm font-medium tracking-wide"
       >
         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
         Laboratorio Operativo en Iguala
