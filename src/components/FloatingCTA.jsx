@@ -20,9 +20,9 @@ export default function FloatingCTA() {
             initial={{ opacity: 0, x: 20, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="liquid-card px-4 md:px-6 py-2 md:py-3 text-[10px] md:text-sm font-bold text-white whitespace-nowrap relative"
+            className="bg-black/80 backdrop-blur-lg border border-white/10 rounded-2xl px-3 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-bold text-white whitespace-nowrap relative shadow-xl"
           >
-            🔧 ¡Diagnóstico GRATIS hoy!
+            <span className="text-[#25D366]">✦</span> ¡Diagnóstico GRATIS hoy!
             <button 
               onClick={() => setShowTooltip(false)}
               className="absolute -top-2 -right-2 bg-black/50 rounded-full p-1 border border-white/10"

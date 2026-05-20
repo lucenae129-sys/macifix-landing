@@ -19,7 +19,6 @@ export default function App() {
     <div className="bg-[#020408] min-h-screen text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
       <Navbar />
       <BackgroundGraphics />
-      <TrustTicker />
       <FloatingCTA />
       <main className="relative">
         <Hero />
